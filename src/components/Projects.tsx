@@ -45,6 +45,7 @@ export default function Projects() {
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" className="w-7 h-7 hover:scale-110 transition-transform drop-shadow-sm" />
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" title="Tailwind CSS" className="w-7 h-7 hover:scale-110 transition-transform drop-shadow-sm" />
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg" alt="NPM" title="NPM" className="w-auto h-7 hover:scale-110 transition-transform drop-shadow-sm" />
+              <img src="https://cdn.simpleicons.org/xampp/FB7A24" alt="XAMPP" title="XAMPP" className="w-7 h-7 hover:scale-110 transition-transform drop-shadow-sm" />
             </div>
 
             <p className="text-slate-500 dark:text-slate-400 font-normal leading-relaxed mb-8 flex-1">
