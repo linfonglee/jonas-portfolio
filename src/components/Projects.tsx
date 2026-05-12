@@ -26,8 +26,9 @@ export default function Projects() {
                   <Info size={18} />
                 </button>
                 {showTooltip && (
-                  <div className="absolute left-8 top-1/2 -translate-y-1/2 w-64 bg-white dark:bg-slate-900 text-xs text-slate-900 dark:text-white p-3 rounded-lg shadow-xl z-20 border border-slate-300 dark:border-slate-700">
-                    Note on Live Demo: The provided link is a feature-complete mirror of the original system. 
+                  <div className="absolute left-0 top-full mt-3 w-72 bg-white dark:bg-slate-900 text-xs text-slate-900 dark:text-white p-4 rounded-xl shadow-xl z-20 border border-slate-300 dark:border-slate-700 leading-relaxed">
+                    <strong className="block mb-1">Note on Live Demo:</strong> 
+                    The provided link is a feature-complete mirror of the original system. 
                     Because the production version handles live patient records at LPU-Batangas, 
                     the actual production environment is restricted to authorized medical personnel only 
                     to ensure Data Privacy Act compliance.
