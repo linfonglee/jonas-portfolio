@@ -8,7 +8,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-300 dark:border-slate-700">
+    <section id="experience" className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-300 dark:border-slate-700">
       <div className="flex items-center space-x-4 mb-12">
         <div className="w-12 h-[1px] bg-sky-500 text-white" />
         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 dark:text-white uppercase">Skills & Experience</h2>
@@ -33,6 +33,9 @@ export default function Experience() {
               </li>
               <li className="relative before:content-[''] before:absolute before:-left-[29px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-white dark:bg-slate-900 before:rounded-full before:border-2 before:border-sky-500 before:shadow-sm">
                 <strong className="text-slate-900 dark:text-white font-medium">ITSM & Operations:</strong> Resolved high-volume Jira tickets within strict SLA targets, managing SaaS procurement and cross-departmental technical solutions.
+              </li>
+              <li className="relative before:content-[''] before:absolute before:-left-[29px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-white dark:bg-slate-900 before:rounded-full before:border-2 before:border-sky-500 before:shadow-sm">
+                <strong className="text-slate-900 dark:text-white font-medium">Network Administration:</strong> Assisted in foundational network administration by configuring VLANs and supporting secure connectivity to help maintain optimized infrastructure performance.
               </li>
               <li className="relative before:content-[''] before:absolute before:-left-[29px] before:top-1.5 before:w-2.5 before:h-2.5 before:bg-white dark:bg-slate-900 before:rounded-full before:border-2 before:border-sky-500 before:shadow-sm">
                 <strong className="text-slate-900 dark:text-white font-medium">Endpoint & Remote Support:</strong> Provided hybrid MDM support for Windows (Intune) and macOS (Jamf), utilizing TeamViewer to minimize downtime for remote agents.

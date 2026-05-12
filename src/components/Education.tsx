@@ -3,7 +3,7 @@ import { GraduationCap } from "lucide-react";
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-300 dark:border-slate-700">
+    <section id="education" className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-300 dark:border-slate-700">
       <div className="flex items-center space-x-4 mb-12">
         <div className="w-12 h-[1px] bg-sky-500 text-white" />
         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 dark:text-white uppercase">Education</h2>

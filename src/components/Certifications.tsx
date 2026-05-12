@@ -98,7 +98,7 @@ export default function Certifications() {
       title: "System Administration and IT Infrastructure Services",
       date: "April 28, 2026",
       issuer: "Google - Coursera",
-      link: "https://coursera.org/verify/IE8058DH1G9Z",
+      link: "https://www.coursera.org/account/accomplishments/verify/IE8O58DH1G9Z",
       category: "IT Support & Networking",
       logo: "/google-coursera.png"
     }
@@ -111,7 +111,7 @@ export default function Certifications() {
   const categories: Category[] = ["All", "Security & Operating Systems", "Emerging Tech & Productivity", "IT Support & Networking"];
 
   return (
-    <section id="certifications" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-300 dark:border-slate-700">
+    <section id="certifications" className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-300 dark:border-slate-700">
       <div className="flex items-center space-x-4 mb-12">
         <div className="w-12 h-[1px] bg-sky-500 text-white" />
         <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 dark:text-white uppercase">Certifications</h2>
