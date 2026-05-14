@@ -111,10 +111,10 @@ export default function Certifications() {
   const categories: Category[] = ["All", "Security & Operating Systems", "Emerging Tech & Productivity", "IT Support & Networking"];
 
   return (
-    <section id="certifications" className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-300 dark:border-slate-700">
+    <section id="certifications" className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-black/10 dark:border-white/10">
       <div className="flex items-center space-x-4 mb-12">
-        <div className="w-12 h-[1px] bg-sky-500 text-white" />
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 dark:text-white uppercase">Certifications</h2>
+        <div className="w-12 h-[1px] bg-yellow-400 text-black dark:text-white" />
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-black dark:text-white uppercase">Certifications</h2>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-12">
@@ -124,8 +124,8 @@ export default function Certifications() {
             onClick={() => setActiveCategory(cat)}
             className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest transition-all ${
               activeCategory === cat 
-                ? "bg-sky-500 text-white shadow" 
-                : "bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:text-white hover:border-sky-500/50 shadow-sm"
+                ? "bg-yellow-400 text-black dark:text-white shadow" 
+                : "bg-white dark:bg-black border border-black/10 dark:border-white/10 text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white hover:border-yellow-400/50 shadow-sm"
             }`}
           >
             {cat}
@@ -135,23 +135,23 @@ export default function Certifications() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredCerts.map((cert, idx) => (
-          <div key={idx} className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-300 dark:border-slate-700 hover:border-sky-500/50 shadow-sm hover:shadow transition-all flex flex-col justify-between group backdrop-blur-sm">
+          <div key={idx} className="bg-white dark:bg-black p-6 rounded-2xl border border-black/10 dark:border-white/10 hover:border-yellow-400/50 shadow-sm hover:shadow transition-all flex flex-col justify-between group backdrop-blur-sm">
             <div>
               <div className="flex justify-between items-start mb-4">
-                <p className="text-[10px] uppercase font-bold text-sky-500">{cert.category}</p>
+                <p className="text-[10px] uppercase font-bold text-black dark:text-white">{cert.category}</p>
                 <img 
                   src={cert.logo} 
                   alt={cert.issuer}
-                  className="w-10 h-10 object-contain rounded bg-slate-50 dark:bg-white p-1 border border-slate-300 dark:border-slate-700/50"
+                  className="w-10 h-10 object-contain rounded bg-white dark:bg-white p-1 border border-black/10 dark:border-white/10"
                   onError={(e) => {
                     const fallbackName = cert.issuer.split(' ')[0];
                     e.currentTarget.src = `https://ui-avatars.com/api/?name=${fallbackName}&background=0EA5E9&color=FFFFFF&font-size=0.33&rounded=true`;
                   }}
                 />
               </div>
-              <h3 className="text-sm font-bold text-slate-900 dark:text-white mb-2 leading-snug group-hover:text-sky-500 transition-colors">{cert.title}</h3>
-              <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mb-1">{cert.issuer}</p>
-              <p className="text-xs font-semibold text-slate-500 dark:text-slate-400/70">{cert.date}</p>
+              <h3 className="text-sm font-bold text-black dark:text-white mb-2 leading-snug group-hover:text-black dark:group-hover:text-white transition-colors">{cert.title}</h3>
+              <p className="text-xs font-medium text-black/70 dark:text-white/70 mb-1">{cert.issuer}</p>
+              <p className="text-xs font-semibold text-black/70 dark:text-white/70">{cert.date}</p>
             </div>
             
             {cert.link && (
@@ -159,7 +159,7 @@ export default function Certifications() {
                 href={cert.link} 
                 target="_blank" 
                 rel="noreferrer"
-                className="mt-6 inline-flex items-center text-xs font-semibold text-sky-500 hover:text-slate-900 dark:text-white transition-colors underline underline-offset-4"
+                className="mt-6 inline-flex items-center text-xs font-semibold text-black dark:text-white hover:text-black dark:hover:text-white transition-colors underline underline-offset-4"
               >
                 Verify Credential →
               </a>

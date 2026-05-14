@@ -51,24 +51,27 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${
         scrolled 
-          ? "bg-slate-50/90 dark:bg-slate-900/90 backdrop-blur-md border-slate-300 dark:border-slate-800 shadow-sm dark:shadow-none" 
+          ? "bg-white dark:bg-black backdrop-blur-md border-black/10 dark:border-white/10 shadow-sm dark:shadow-none" 
           : "bg-transparent border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0 font-bold text-lg tracking-tight text-sky-500">
+          <div 
+            className="flex-shrink-0 font-bold text-lg tracking-tight text-black dark:text-white cursor-pointer"
+            onClick={() => document.querySelector('#hero')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Jonas R. Castillo
           </div>
           
           <div className="flex items-center space-x-6">
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-6 text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400">
+            <div className="hidden md:flex space-x-6 text-xs uppercase tracking-widest text-black/70 dark:text-white/70">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="font-bold hover:text-sky-500 transition-colors"
+                  className="font-bold hover:text-black dark:hover:text-white transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
                     document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
@@ -81,7 +84,7 @@ export default function Navbar() {
 
             <button
               onClick={toggleDarkMode}
-              className="text-slate-500 dark:text-slate-400 hover:text-sky-500 transition-colors focus:outline-none p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800"
+              className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white transition-colors focus:outline-none p-2 rounded-full hover:bg-white/5 dark:hover:bg-black/5"
               aria-label="Toggle Dark Mode"
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
@@ -91,7 +94,7 @@ export default function Navbar() {
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-slate-500 dark:text-slate-400 hover:text-sky-500 focus:outline-none p-2"
+                className="text-black/70 dark:text-white/70 hover:text-black dark:hover:text-white focus:outline-none p-2"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -102,13 +105,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-300 dark:border-slate-800">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400">
+        <div className="md:hidden bg-white dark:bg-black border-b border-black/10 dark:border-white/10">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-xs uppercase tracking-widest text-black/70 dark:text-white/70">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block px-3 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-sky-500 rounded-md transition-colors"
+                className="block px-3 py-2 hover:bg-white/5 dark:hover:bg-black/5 hover:text-black dark:hover:text-white rounded-md transition-colors"
                 onClick={(e) => {
                   e.preventDefault();
                   setIsOpen(false);

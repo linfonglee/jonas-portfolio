@@ -57,15 +57,15 @@ export default function Badges() {
   ];
 
   return (
-    <section id="badges" className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-300 dark:border-slate-700">
+    <section id="badges" className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-black/10 dark:border-white/10">
       <div className="flex items-center space-x-4 mb-12">
-        <div className="w-12 h-[1px] bg-sky-500 text-white" />
-        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 dark:text-white uppercase">Badges</h2>
+        <div className="w-12 h-[1px] bg-yellow-400 text-black dark:text-white" />
+        <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-black dark:text-white uppercase">Badges</h2>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {badges.map((badge, idx) => (
-          <div key={idx} className="flex flex-col items-center text-center justify-between group bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-sky-400 dark:hover:border-sky-500/50 hover:shadow-md transition-all h-full">
+          <div key={idx} className="flex flex-col items-center text-center justify-between group bg-white dark:bg-black p-6 rounded-2xl border border-black/10 dark:border-white/10 shadow-sm hover:border-yellow-400 dark:hover:border-yellow-400/50 hover:shadow-md transition-all h-full">
             <div className="w-32 h-32 mb-6 relative flex items-center justify-center">
               <img 
                 src={badge.image} 
@@ -79,13 +79,13 @@ export default function Badges() {
               />
             </div>
             <div className="flex flex-col items-center flex-grow justify-between w-full">
-              <h3 className="text-sm font-bold text-slate-800 dark:text-slate-100 leading-snug mb-4">{badge.title}</h3>
+              <h3 className="text-sm font-bold text-black dark:text-white leading-snug mb-4">{badge.title}</h3>
               
               <a 
                 href={`https://www.credly.com/badges/${badge.id}/public_url`}
                 target="_blank" 
                 rel="noreferrer"
-                className="mt-auto inline-flex items-center px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700 text-[10px] font-bold uppercase tracking-widest text-slate-600 dark:text-slate-300 hover:border-sky-500 hover:text-sky-500 transition-all bg-slate-50 dark:bg-slate-800/50"
+                className="mt-auto inline-flex items-center px-4 py-2 rounded-full border border-black/10 dark:border-white/10 text-[10px] font-bold uppercase tracking-widest text-black/70 dark:text-white/70 hover:border-yellow-400 hover:text-black dark:hover:text-white transition-all bg-white dark:bg-black"
               >
                 Verify Credential →
               </a>
